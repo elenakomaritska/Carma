@@ -64,6 +64,7 @@ $(document).ready(function () {
         $('.close').on('click', function () {
             $(".modall").removeClass('active-modall');
             $('.body').removeClass('showing-modal');
+            $(".modall-video iframe").attr('src', '')
         });
 
     $('.link-video').on('click', function () {
