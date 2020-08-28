@@ -66,9 +66,9 @@ $(document).ready(function () {
             $('.body').removeClass('showing-modal');
         });
 
-    $('.thank').on('click', function () {
+    $('.link-video').on('click', function () {
         $(".modall").removeClass('active-modall');
-        $(".modall-thank").addClass('active-modall');
+        $(".modall-video").addClass('active-modall');
         $('.body').addClass('showing-modal');
     });
 

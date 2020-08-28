@@ -11,7 +11,6 @@
     top: 0;
 
     .modall-body {
-        max-width: 320px;
         background-color: $color_white;
         transform: translate(-50%, -50%);
         left: 50%;
@@ -23,17 +22,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        height: auto;
         padding: 0;
-        border-radius: 20px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
     }
 
     .close {
-        top: 33px;
+        top: -33px;
         right: 11px;
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
         cursor: pointer;
         position: absolute;
         z-index: 5;
@@ -43,10 +44,10 @@
             content: "";
             top: 6px;
             left: 0;
-            width: 15px;
+            width: 25px;
             height: 2px;
             position: absolute;
-            background: $color_silver;
+            background: $color_white;
         }
 
         &::before {
@@ -69,14 +70,136 @@
 
 }
 
-.modall-politic {
+.modall-video {
     .modall-body {
         background-color: $color_white;
+        width: 320px;
+        height: 180px;
+        max-width: none;
+
+        @media(min-width: 480px) {
+            width: 470px;
+            height: 272px;
+        }
+
+        @media (min-width: 768px) {
+            width: 667px;
+            height: 379px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 883px;
+            height: 500px;
+        }
+
+        @media (min-width: 1280px) {
+            width: 1095px;
+            height: 617px;
+        }
+
+        @media (min-width: 1440px) {
+            width: 1195px;
+            height: 670px;
+        }
     }
 
-    .close {
-        top: 20px;
-        right: 20px;
+    .video {
+        position: relative;
+        width: 280px;
+        height: 160px;
+        margin: 0 auto;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+
+        @media(min-width: 480px) {
+            width: 450px;
+            height: 252px;
+        }
+
+        @media (min-width: 768px) {
+            width: 647px;
+            height: 359px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 863px;
+            height: 480px;
+        }
+
+        @media (min-width: 1280px) {
+            width: 1075px;
+            height: 597px;
+        }
+
+        @media (min-width: 1440px) {
+            width: 1175px;
+            height: 650px;
+        }
+    }
+
+    .video img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video iframe {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .play-btn {
+        position: absolute;
+        z-index: 666;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: 0;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $color_green;
+
+        @media (min-width: 768px) {
+            width: 120px;
+            height: 120px;
+        }
+
+        &::after {
+            content: '';
+            top: 50%;
+            left: 54%;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../img/play.png);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+            @media (min-width: 768px) {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    .play-btn:hover {
+        cursor: pointer;
+    }
+
+    .play-btn:focus {
+        outline: 0;
     }
 
     h2 {
@@ -86,51 +209,7 @@
         font-size: 19px;
     }
 
-    .politics-body {
-        padding: 20px;
-        overflow-y: scroll;
-        max-height: 291px;
-        background-color: $color_lightSilver;
-        margin: 20px;
 
-        h2 {
-            font-size: 20px;
-        }
-
-        li {
-            p {
-                margin: 10px;
-                text-align: left;
-            }
-        }
-    }
-}
-
-.modall-thank {
-    .modall-body {
-        max-width: 908px;
-        min-height: 211px;
-        box-shadow: 0 20px 35px rgba(0, 130, 206, 0.24);
-        border-radius: 20px;
-        text-align: center;
-        padding: 63px 70px;
-        width: 290px;
-
-        h2 {
-            font-size: 25px;
-            font-weight: 700;
-            margin-bottom: 50px;
-        }
-
-        p {
-            font-size: 16px;
-            font-weight: 300;
-        }
-
-        .close {
-            top: 13px;
-        }
-    }
 }
 
 .modall.active-modall {
@@ -139,61 +218,4 @@
 
 .showing-modal {
     overflow: hidden;
-}
-
-@media screen and (max-height: 600px) {
-    .modall {
-        .modall-body {
-            height: 100%;
-            width: 100%;
-            overflow-y: auto;
-        }
-    }
-
-    .modall-thank {
-        .modall-body {
-            height: auto;
-            width: 290px;
-            padding: 63px 70px;
-        }
-    }
-}
-
-
-@media screen and (min-width: 768px) {
-    .modall {
-        .modall-body {
-            max-width: 530px;
-        }
-
-        .close {
-            top: 30px;
-            right: 18px;
-        }
-    }
-
-    .modall-politic {
-        .close {
-            top: 25px;
-            right: 18px;
-        }
-    }
-
-    .modall-thank {
-        .modall-body {
-            max-width: 908px;
-            width: 100%;
-
-            .close {
-                top: 20px;
-                right: 12px;
-            }
-
-            h2 {
-                font-size: 35px;
-                font-weight: 700;
-                margin-bottom: 41px;
-            }
-        }
-    }
 }
