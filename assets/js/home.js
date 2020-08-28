@@ -47,6 +47,18 @@ $(document).ready(function () {
     $('#play').hide();
   })
 
+  // кнопка ютуб
+  $('#play2').on('click', function (e) {
+    e.preventDefault();
+    $("#playerPopoup").attr('src', '')
+    var a = $('#playerPopoup').attr("data-youtube");
+    $('#playerPopoup').attr('src', a);
+    $('#playerPopoup').show();
+    $('#video-cover').hide();
+    $('#play2').hide();
+  })
+
+
   // Счетчик
   function countup(className) {
     var countBlockTop = $(".section-market .list").offset().top;
@@ -94,14 +106,24 @@ $(document).ready(function () {
 
 
   //slider section-reviews
-  $('.section-reviews .list').slick({
+  $('#reviews2').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 600,
     dots: false,
     fade: true,
     cssEase: 'linear',
-    nextArrow: $('.next')
+    nextArrow: $('#next2')
+  })
+
+  $('#reviews').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 600,
+    dots: false,
+    fade: true,
+    cssEase: 'linear',
+    nextArrow: $('#next')
   })
 
 
