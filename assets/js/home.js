@@ -54,7 +54,7 @@ $(document).ready(function () {
     var a = $('#playerPopoup').attr("data-youtube");
     $('#playerPopoup').attr('src', a);
     $('#playerPopoup').show();
-    $('#video-cover').hide();
+    $('#video-cover2').hide();
     $('#play2').hide();
   })
 
