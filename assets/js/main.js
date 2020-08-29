@@ -56,15 +56,16 @@ $(document).ready(function () {
             a(document).mouseup(function (b) {
                 var c = a(".modall-body");
                 c.is(b.target) || 0 !== c.has(b.target).length || (c.removeClass("active-modall"),
-                    a(".modall").removeClass("active-modall"),
-                    a(".body").removeClass("showing-modal"))
+                        a(".modall").removeClass("active-modall"),
+                        a(".body").removeClass("showing-modal")),
+                    $("#playerPopoup").attr('src', '')
             })
         }),
 
         $('.close').on('click', function () {
             $(".modall").removeClass('active-modall');
             $('.body').removeClass('showing-modal');
-            $(".modall-video iframe").attr('src', '')
+            $("#playerPopoup").attr('src', '')
         });
 
     $('.link-video').on('click', function () {
