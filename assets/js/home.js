@@ -137,6 +137,13 @@ $(document).ready(function () {
 
   $('.errore.active').parent('.form-column').addClass('errore-input')
 
+  $('.show').on('click', function () {
+    $(this).toggleClass('active').parent('.action').prev('ul').toggleClass('active')
+    $('.show').text('Learn more')
+    $('.show.active').text('Roll up')
+  })
+
+
   $(".go-to").click(function () {
     var elementClick = $(this).attr("href")
     var destination = $(elementClick).offset().top - $('.header').height();

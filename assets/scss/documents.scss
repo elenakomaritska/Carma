@@ -1,0 +1,163 @@
+@import "libs/variables";
+@import 'responsive-tabs.css';
+
+.header {
+    background-color: $color_darkBlue !important;
+}
+
+.section-documents {
+    margin-top: 60px;
+
+    @media (min-width: 768px) {
+        margin-top: 80px;
+    }
+
+    .tabs {
+        padding: 0;
+        background-color: $color_lightSilver;
+
+        @media (min-width: 768px) {
+            display: flex;
+            min-height: 80vh;
+        }
+
+        .r-tabs-accordion-title {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            background-color: $color_lightSilver;
+
+            a {
+                font-family: 'Audiowide', cursive;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                display: block;
+                border-bottom: 1px solid $color_green;
+                color: $color_black;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        .r-tabs-panel {
+            background-color: $color_white;
+
+            @media (min-width: 768px) {
+                width: 100%;
+                padding: 65px 22px 57px;
+            }
+        }
+
+        ul {
+            @media (min-width: 768px) {
+                background-color: $color_lightSilver;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                padding: 150px 30px;
+                min-width: 250px;
+            }
+
+            @media (min-width: 1024px) {
+                padding: 139px 30px 150px 134px;
+                min-width: 308px;
+            }
+
+            li {
+                margin-bottom: 0;
+                margin-top: 30px;
+
+                a {
+                    font-family: 'Audiowide', cursive;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 18px;
+                    display: block;
+                    color: $color_black;
+                    padding-left: 5px;
+                    border-left: 6px solid $color_lightSilver
+                }
+            }
+
+            .r-tabs-state-active {
+                a {
+                    border-left: 6px solid $color_green;
+                }
+            }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 25px;
+            line-height: 30px;
+
+            @media (min-width: 480px) {
+                font-size: 42px;
+                line-height: 54px;
+                margin-bottom: 31px;
+            }
+
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            line-height: 26px;
+
+            @media (min-width: 480px) {
+                font-size: 32px;
+                line-height: 42px;
+                margin-bottom: 17px;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            @media (min-width: 480px) {
+                margin-bottom: 27px;
+                max-width: 784px;
+            }
+        }
+
+        .key {
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .description {
+            margin-bottom: 15px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .authorization {
+            display: flex;
+            background: $color_lightGrey;
+            border-radius: 12px;
+            padding: 16px 24px;
+            align-items: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            max-width: 806px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            display: block;
+            color: $color_silver;
+            margin-bottom: 6px;
+        }
+    }
+}

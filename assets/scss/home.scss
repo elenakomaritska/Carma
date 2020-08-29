@@ -364,6 +364,14 @@
             flex-direction: column;
             padding-top: 31px;
 
+            &.active {
+                height: auto !important;
+
+                .hide {
+                    display: block;
+                }
+            }
+
             li {
                 max-width: 336px;
                 margin: 0 auto 46px;
@@ -381,6 +389,10 @@
                     font-size: 18px;
                     line-height: 26px;
                 }
+            }
+
+            .hide {
+                display: none;
             }
         }
 
