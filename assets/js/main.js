@@ -79,4 +79,13 @@ $(document).ready(function () {
             return false;
         }
     });
+
+    $(".go-to").click(function () {
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top - $('.header').height();
+        jQuery("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+        return false;
+    });
 });

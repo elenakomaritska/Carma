@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+    <link rel="stylesheet" href="css/documents.min.css" data-inprogress="">
+
+</head>
+
+<body>
+    <!-- Основной контент -->
+    <div class="wrapper">
+        <main class="main">
+
+            <!-- Header -->
+            <div class="menu-mobile">
+    <span class="close-menu"></span>
+    <nav>
+        <ul>
+            <li><a href="index.html#data" class="go-to">How it works</a></li>
+            <li><a href="index.html#about" class="go-to">About us</a></li>
+            <li><a href="documents.html">Documentation</a></li>
+            <li><a href="index.html#form" class="btn go-to">Contact us</a></li>
+        </ul>
+    </nav>
+</div>
+
+<header class="header" id="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html"><img alt="" src="img/Logo.png"></a>
+            </div>
+            <span class="open-menu">
+                <span></span>
+            </span>
+            <ul class="desctop-menu">
+                <li><a href="index.html#data" class="go-to">How it works</a></li>
+                <li><a href="index.html#about" class="go-to">About us</a></li>
+                <li><a href="documents.html">Documentation</a></li>
+                <li><a href="index.html#form" class="btn go-to">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+            <!-- Popup -->
+            <div class="modall modall-video">
+    <div class="modall-body">
+        <span class="close"></span>
+        <div class="content">
+            <div class="video">
+                <img id="video-cover2" src="img/Video.png" alt="Video title">
+                <iframe id="playerPopoup" data-youtube="https://www.youtube.com/embed/7sbbb7Dt3D8?autoplay=1" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                <button id="play2" class="play-btn">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            <section class="section section-documents">
+                <div class="section-content">
+                    <div class="tabs" id="responsiveTabs">
+                        <ul class="customScroll">
+                            <li><a href="#tabs-1">Authentication</a></li>
+                            <li><a href="#tabs-2">Send request</a></li>
+                            <li><a href="#tabs-3">Get respond</a></li>
+                        </ul>
+                        <div id="tabs-1">
+                            <h2>API. Developer guide</h2>
+                            <h3>APIKeyHeader</h3>
+                            <p>
+                                This is the most secure authorization type and the one with the most flexibility.
+                            </p>
+                            <p>API keys can generate by calling the dedicated API method. Furthermore, API keys can
+                                have a limited scope and cover only some API methods. Lastly, they can revoke at any
+                                time. This range of possibilities makes API keys well suited for separating the API
+                                access rights across multiple applications or use cases. Finally, the loss of an API
+                                key is easily manageable.
+                            </p>
+                            <p>You can manage your API keys from GUI, or programmatically with dedicated API.</p>
+                            <div class="key">
+                                <p>API key Authorization header example:</p>
+                                <span class="authorization">App b546e-y59a-e931-478d-ji87-28a67</span>
+                            </div>
+                            <div class="description">
+                                <span class="title">Security scheme type:</span>
+                                <p>API Key</p>
+                            </div>
+                            <div class="description">
+                                <span class="title">Header parameter name:</span>
+                                <p> Authorization</p>
+                            </div>
+                        </div>
+                        <div id="tabs-2">
+                            <h2>API. Developer guide</h2>
+                            <h3>APIKeyHeader</h3>
+                            <p>
+                                This is the most secure authorization type and the one with the most flexibility.
+                            </p>
+                            <p>API keys can generate by calling the dedicated API method. Furthermore, API keys can
+                                have a limited scope and cover only some API methods. Lastly, they can revoke at any
+                                time. This range of possibilities makes API keys well suited for separating the API
+                                access rights across multiple applications or use cases. Finally, the loss of an API
+                                key is easily manageable.
+                            </p>
+                        </div>
+                        <div id="tabs-3">
+                            <h2>API. Developer guide</h2>
+                            <h3>APIKeyHeader</h3>
+                            <p>
+                                This is the most secure authorization type and the one with the most flexibility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html"><img alt="" src="img/Logo.png"></a>
+            </div>
+            <ul>
+                <li><a href="#data" class="go-to">How it works</a></li>
+                <li><a href="#about" class="go-to">About us</a></li>
+                <li><a href="documents.html">Documentation</a></li>
+                <li><a href="#form" class="go-to">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="socials">
+            <a href="#" target="_blank" class="twiter"></a>
+            <a href="#" target="_blank" class="insta"></a>
+            <a href="#" target="_blank" class="facebook"></a>
+        </div>
+        <div class="footer-bottom">
+            <p>©2020 CARMA chain. All rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+
+
+
+    <!-- Скрипты -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.responsiveTabs.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+        $('#responsiveTabs').responsiveTabs({});
+    </script>
+
+</body>
+
+</html>
