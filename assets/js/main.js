@@ -1,20 +1,23 @@
 document.addEventListener("touchstart", function () {}, true);
+
+var sectionHeight = $('.section-media').height()
+
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= 20) {
+    if ($(window).scrollTop() >= sectionHeight) {
         $('header').css('background-color', '#151F49')
             .css('transition', '1s').css('position', 'fixed')
     } else {
-        $('header').css('background-color', 'inherit')
+        $('header').css('background-color', 'inherit').css('position', 'absolute')
             .css('transition', '1s');
     }
 });
 
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= 20) {
+    if ($(window).scrollTop() >= sectionHeight) {
         $('header').css('background-color', '#151F49')
             .css('transition', '1s').css('position', 'fixed')
     } else {
-        $('header').css('background-color', 'inherit')
+        $('header').css('background-color', 'inherit').css('position', 'absolute')
             .css('transition', '1s');
     }
 });
@@ -80,12 +83,4 @@ $(document).ready(function () {
         }
     });
 
-    $(".go-to").click(function () {
-        var elementClick = $(this).attr("href")
-        var destination = $(elementClick).offset().top - $('.header').height();
-        jQuery("html:not(:animated),body:not(:animated)").animate({
-            scrollTop: destination
-        }, 800);
-        return false;
-    });
 });

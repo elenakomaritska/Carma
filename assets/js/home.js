@@ -144,12 +144,30 @@ $(document).ready(function () {
   })
 
 
-  $(".go-to").click(function () {
-    var elementClick = $(this).attr("href")
-    var destination = $(elementClick).offset().top - $('.header').height();
-    jQuery("html:not(:animated),body:not(:animated)").animate({
-      scrollTop: destination
-    }, 800);
-    return false;
-  });
+  var HashValue = location.hash;
+
+  location.hash = '';
+  if (HashValue[1] != undefined) {
+    $('html, body').animate({
+      scrollTop: $(HashValue).offset().top - 60
+    }, 'slow');
+  };
+
+  //Scroll to id
+  function handler(event) {
+    var hash = event.target.hash;
+    var headerHeight = $('header').height();
+    if (hash) {
+      event.preventDefault();
+      if ($(hash).length) {
+        var offset = $(hash).offset().top - $('header').height();
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 'slow');
+        //console.log(offset);
+      }
+    }
+  }
+  //End scroll to id
+  $('.nav a').on("click", handler);
 })
