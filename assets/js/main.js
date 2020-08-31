@@ -4,23 +4,16 @@ var sectionHeight = $('.section-media').height()
 
 $(window).scroll(function () {
     if ($(window).scrollTop() >= sectionHeight) {
-        $('header').css('background-color', '#151F49')
-            .css('transition', '1s').css('position', 'fixed')
+        $('header').css('background-color', '#151F49').removeClass('out').removeClass('topAbsolute')
+            .css('position', 'fixed').addClass('active')
+    } else if ($(window).scrollTop() >= 300) {
+        $('header').addClass('out')
     } else {
-        $('header').css('background-color', 'inherit').css('position', 'absolute')
-            .css('transition', '1s');
+        $('header').css('background-color', 'inherit').css('position', 'absolute').addClass('topAbsolute')
+
     }
 });
 
-$(window).scroll(function () {
-    if ($(window).scrollTop() >= sectionHeight) {
-        $('header').css('background-color', '#151F49')
-            .css('transition', '1s').css('position', 'fixed')
-    } else {
-        $('header').css('background-color', 'inherit').css('position', 'absolute')
-            .css('transition', '1s');
-    }
-});
 
 $(document).ready(function () {
 
