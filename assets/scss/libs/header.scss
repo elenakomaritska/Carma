@@ -114,10 +114,10 @@ header {
     height: 80px;
     transition: all .3s ease;
     transform: translateY(0%);
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
+    -webkit-transition: all 0s linear;
+    -moz-transition: all 0s linear;
+    -ms-transition: all 0s linear;
+    -o-transition: all 0s linear;
 
     &.active {
         height: 80px;
@@ -152,6 +152,11 @@ header {
         -moz-transform: translateY(0%);
         -ms-transform: translateY(0%);
         -o-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: all 0s linear;
+        -moz-transition: all 0s linear;
+        -ms-transition: all 0s linear;
+        -o-transition: all 0s linear;
     }
 
 
